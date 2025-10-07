@@ -1,0 +1,49 @@
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid gray;
+    padding: 0 2rem;
+}
+
+.navegacion__logo a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navegacion__enlaces a:hover, .activo{
+    color: rgb(5, 185, 5);
+}
+
+.navegacion__enlaces nav{
+    display: flex;
+    gap: 3rem;
+}
+
+.tracker{
+    color: rgb(5, 185, 5);
+}
+
+@media(width < 768px){
+    .navegacion{
+        flex-direction: column;
+    }
+    .navegacion__enlaces{
+        width: 100%;
+        margin-top: -2rem;
+    }
+    .navegacion__enlaces nav{
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        width: 100%;
+    }
+    .navegacion__enlaces a{
+        display: block;
+        padding: 1rem;
+    }
+    .navegacion__enlaces a:hover{
+        background-color: #121227;
+    }
+}

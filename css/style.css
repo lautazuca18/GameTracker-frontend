@@ -1,0 +1,47 @@
+@import url('header.css');
+
+:root{
+    --principal: #111121;
+    --azul: #1919e6;
+    --azulOscuro: #121248;
+    --blanco: #ffffff
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    background-color: var(--principal);
+    color: var(--blanco);
+    font-family: "Alan Sans", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1, p{
+    text-align: center;
+}
+
+.contenedor{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*FOOTER*/
+/*FOOTER*/
+
+footer{
+   padding: 3rem;
+   background-color: #121227;
+}
