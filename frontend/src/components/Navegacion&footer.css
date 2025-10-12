@@ -1,28 +1,35 @@
+footer{
+    padding: 3rem;
+    text-align: center;
+    background-color: #121227;
+}
+
 .navegacion{
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid gray;
-    padding: 0 2rem;
+    padding: 1.7rem;
 }
-
 .navegacion__logo a{
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-
-.navegacion__enlaces a:hover, .activo{
+.tracker,
+.navegacion__enlaces a.activo{
     color: rgb(5, 185, 5);
 }
-
+.navegacion__enlaces a{
+    transition: 0.4s;
+}
+.navegacion__enlaces a:hover{
+    color: rgb(5, 185, 5);
+    transition: 0.4s;
+}
 .navegacion__enlaces nav{
     display: flex;
     gap: 3rem;
-}
-
-.tracker{
-    color: rgb(5, 185, 5);
 }
 
 @media(width < 768px){
