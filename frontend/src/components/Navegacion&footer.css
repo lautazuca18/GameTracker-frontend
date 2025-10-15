@@ -38,7 +38,7 @@ footer{
     }
     .navegacion__enlaces{
         width: 100%;
-        margin-top: -2rem;
+        
     }
     .navegacion__enlaces nav{
         flex-direction: column;

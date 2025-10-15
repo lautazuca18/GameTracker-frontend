@@ -1,0 +1,157 @@
+/*-----------PÁGINA EXPLORAR------------*/
+/*-----------PÁGINA EXPLORAR------------*/
+
+/*BUSCADOR*/
+/*BUSCADOR*/
+
+.buscador{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.buscador__contenedor{
+    width: 100%;
+    max-width: 40rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #1f2937;
+}
+
+.buscador__contenedor input{
+    border: none;
+    background-color: transparent;
+    color: #FFF;
+    outline: none;
+    flex: 1;
+    min-width: 0;
+}
+
+/*JUEGOS*/
+/*JUEGOS*/
+
+.juegos{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.juegos__card{
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.juegos__card img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.juegos__info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 0.5rem;
+    line-height: 1.5;
+}
+
+.juegos__info p{
+    font-size: smaller;
+}
+
+/*-----------BIBLIOTECA------------*/
+/*-----------BIBLIOTECA------------*/
+
+.tituloAgregarJuego{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.tituloAgregarJuego__boton{
+    display: flex;
+    align-items: center;
+    background-color: #1919e6;
+    padding: 1.3rem 1rem;
+    border-radius: 1rem;
+    gap: .2rem;
+}
+.juegosLibreria{
+    padding: 0rem 5rem;
+}
+.juegosLibreria__card{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 2rem;
+    border: solid 1px #121261;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    background-color: #11112b;
+    margin-bottom: 3rem;
+}
+.juegosLibreria__card__informacion__top{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    line-height: 3rem;
+    height: 50%;
+}
+.juegosLibreria__card__informacion__top p{
+    text-align: start;
+}
+.juegosLibreria__card__informacion__bottom{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end;
+    align-items: end;
+    height: 50%;
+    gap: 2rem;
+}
+.juegosLibreria__card__informacion__bottom p{
+    color: #fff;
+    padding: .5rem 4rem;
+    background-color: #121248;
+    font-size: smaller;
+    text-transform: uppercase;
+    border-radius: 1rem;
+}
+.juegosLibreria__card article{
+    display: flex;
+    flex-direction: column;
+}
+.juegosLibreria__card__img{
+    border-radius: 10px;
+}
+.juegosLibreria__card__img img{
+    width: 19rem;
+    min-height: 27rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    aspect-ratio: 16/9;
+}
+
+@media(width < 715px){
+    .juegosLibreria__card{
+        grid-template-columns: 1fr;
+    }
+    .juegosLibreria__card__img{
+        display: flex;
+        justify-content: center;
+        border-radius: 10px 10px 0 0;
+    }
+    .juegosLibreria__card__img img{
+        
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+
+/*-----------ESTADISTICAS------------*/
+/*-----------ESTADISTICAS------------*/
