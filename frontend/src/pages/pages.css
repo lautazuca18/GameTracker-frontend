@@ -155,3 +155,25 @@
 
 /*-----------ESTADISTICAS------------*/
 /*-----------ESTADISTICAS------------*/
+
+.estadisticaTitulo{
+    padding: 2rem;
+    display: flex;
+    justify-content: start;
+}
+.estadisticaTarjertas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.tarjetaEstadistica{
+    background-color: #181d2c;
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+.tarjetaEstadistica p{
+    text-align: left;
+}
