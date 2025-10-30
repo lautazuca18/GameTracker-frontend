@@ -1,8 +1,23 @@
 import './pages.css';
 import { Link } from 'react-router-dom';
-import gta from '../assets/img/gta.jpg';
+import { useEffect, useState } from 'react';
+import TarjetaJuego from "../components/TarjetaJuego";
 
 function Biblioteca() {
+  const [juegos, setJuegos] = useState([]);
+  const [cargando, setCargando] = useState(true);
+
+  useEffect(() => {
+    //Conexión con el back
+
+    fetch("http://localhost:5000/juegos")
+      .then((res) => res.json())
+      .then((data) => {
+        setJuegos(data);
+        setCargando(false);
+      });
+  }, []);
+
   return (
     <main>
 
@@ -32,32 +47,11 @@ function Biblioteca() {
 
       <section className="juegosLibreria contenedor">
 
-        <div className="juegosLibreria__card">
-          <div className="juegosLibreria__card__img">
-            <img src={gta} alt="Juego" />
-          </div>
-
-          <article className="juegosLibreria__card__informacion">
-            <div className="juegosLibreria__card__informacion__top">
-              <h4>The Last Of Us Part II</h4>
-              <p>PlayStation 4</p>
-              <p>2023</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                tempora dolore cum. Animi delectus, facere.
-              </p>
-            </div>
-
-            <div className="juegosLibreria__card__informacion__bottom">
-              <p>Acción</p>
-              <p>Unity</p>
-              <p>En curso</p>
-            </div>
-          </article>
-        </div>
-
+        {juegos.map((juego) => (
+          <TarjetaJuego key={juego._id} juego={juego}/>
+        ))}
+      
       </section>
-
     </main>
   );
 }
