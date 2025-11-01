@@ -20,7 +20,7 @@ function TarjetaJuego({ juego }){
             <div className="juegosLibreria__card__informacion__bottom">
               <p>{juego.genero}</p>
               <p>{juego.desarrollador}</p>
-              <p>{juego.completado}</p>
+              <p>{juego.completado == "true" ? "Terminado" : "En Curso"}</p>
             </div>
           </article>
         </div>
