@@ -1,9 +1,9 @@
 /*-----------PÁGINA EXPLORAR------------*/
-/*-----------PÁGINA EXPLORAR------------*/
+/*-----------PÁGINA EXPLORAR------------
 
 /*BUSCADOR*/
 /*BUSCADOR*/
-
+/*
 .buscador{
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@
 
 /*JUEGOS*/
 /*JUEGOS*/
-
+/*
 .juegos{
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +66,8 @@
     font-size: smaller;
 }
 
+*/
+
 /*-----------BIBLIOTECA------------*/
 /*-----------BIBLIOTECA------------*/
 
@@ -82,6 +84,10 @@
     padding: 1.3rem 1rem;
     border-radius: 1rem;
     gap: .2rem;
+    transition: 0.5s;
+}
+.tituloAgregarJuego__boton:hover{
+    background-color: #121248;
 }
 .juegosLibreria{
     padding: 0rem 5rem;
@@ -101,30 +107,33 @@
     flex-direction: column;
     align-items: start;
     line-height: 3rem;
-    height: 50%;
 }
 .juegosLibreria__card__informacion__top p{
     text-align: start;
 }
 .juegosLibreria__card__informacion__bottom{
     display: flex;
-    flex-wrap: wrap;
-    align-content: end;
-    align-items: end;
-    height: 50%;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
 }
-.juegosLibreria__card__informacion__bottom p{
+.juegosLibreria__card__informacion__bottom button{
     color: #fff;
-    padding: .5rem 4rem;
+    padding: 1rem;
+    cursor: pointer;
     background-color: #121248;
     font-size: smaller;
     text-transform: uppercase;
     border-radius: 1rem;
+    border: none;
+    transition: 0.7s;
+}
+.juegosLibreria__card__informacion__bottom button:hover{
+    background-color: #1919e6;
 }
 .juegosLibreria__card article{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 .juegosLibreria__card__img{
     border-radius: 10px;
@@ -150,8 +159,10 @@
         
         border-radius: 10px 10px 0 0;
     }
+    .juegosLibreria__card article{
+        grid-template-columns: 1fr;
+    }
 }
-
 
 /*-----------ESTADISTICAS------------*/
 /*-----------ESTADISTICAS------------*/

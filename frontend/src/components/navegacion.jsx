@@ -7,7 +7,7 @@ function Navegacion() {
     <header className='navegacion contenedor'>
 
       <section className='navegacion__logo'>
-        <Link to="/">
+        <Link to="/biblioteca">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="35"
@@ -32,7 +32,6 @@ function Navegacion() {
 
       <section className='navegacion__enlaces'>
         <nav>
-          <NavLink to="/"className={({ isActive }) => (isActive ? "activo" : "")}>Explorar</NavLink>
           <NavLink to="/biblioteca" className={({ isActive }) => (isActive ? "activo" : "")}>Biblioteca</NavLink>
           <NavLink to="/estadisticas" className={({ isActive }) => (isActive ? "activo" : "")}>Estadísticas</NavLink>
         </nav>
