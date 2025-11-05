@@ -145,7 +145,13 @@
     border-radius: 1rem;
     aspect-ratio: 16/9;
 }
-
+h4{
+    color: #05b905;
+}
+h4 span{
+    color: gray;
+    font-weight: 400;
+}
 @media(width < 715px){
     .juegosLibreria__card{
         grid-template-columns: 1fr;

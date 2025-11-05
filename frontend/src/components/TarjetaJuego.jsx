@@ -14,11 +14,11 @@ function TarjetaJuego({ juego, onDelete }) {
       <article className="juegosLibreria__card__informacion">
         <div className="juegosLibreria__card__informacion__top">
           <h2>{juego.titulo}</h2>
-          <p>{juego.plataforma}</p>
-          <p>{juego.anioLanzamiento}</p>
-          <p>{juego.genero}</p>
-          <p>{juego.desarrollador}</p>
-          <p>{juego.completado === true ? "Terminado" : "En Curso"}</p>
+          <h4>Plataforma/s: <span>{juego.plataforma}</span> </h4>
+          <h4>Año Lanzamiento: <span>{juego.anioLanzamiento}</span></h4>
+          <h4>Genero: <span>{juego.genero}</span></h4>
+          <h4>Desarrollador/es: <span>{juego.desarrollador}</span></h4>
+          <h4>Estado: <span>{juego.completado === true ? "Terminado" : "En Curso"}</span></h4>
           <p>{juego.descripcion}</p>
         </div>
 

@@ -142,31 +142,36 @@ function FormularioJuego() {
           </div>
 
           <div className="formulario-agregar-juego-campos">
-            <p>Completado</p>
-            <input
-              type="radio"
-              id="true"
-              name="completado"
-              value="true"
-              checked={formData.completado === true}
-              onChange={handleChange}
-              required
-            />
-            <label htmlFor="true">True</label>
-
-            <input
-              type="radio"
-              id="false"
-              name="completado"
-              value="false"
-              checked={formData.completado === false}
-              onChange={handleChange}
-              required
-            />
-            <label htmlFor="false">False</label>
+            <p className="p">Completado</p>
+            <div className="campo-completado">
+              <div>
+                <label htmlFor="true">Terminado</label>
+                <input
+                  type="radio"
+                  id="true"
+                  name="completado"
+                  value="true"
+                  checked={formData.completado === true}
+                  onChange={handleChange}
+                  required
+                />
+                </div>
+                <div>
+                  <label htmlFor="false">En curso</label>
+                <input
+                  type="radio"
+                  id="false"
+                  name="completado"
+                  value="false"
+                  checked={formData.completado === false}
+                  onChange={handleChange}
+                  required
+                />
+                </div>
+            </div>
           </div>
         </div>
-        <button type="submit">Agregar Juego</button>
+        <button className="boton-formulario-agregar-juego" type="submit">Agregar Juego</button>
       </form>
     </div>
   );

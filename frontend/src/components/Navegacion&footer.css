@@ -76,13 +76,54 @@ footer{
     background-color: #121248;
 }
 .formulario-agregar-juego-campos input::placeholder{
-    color: white;
+    color: gray;
+}
+.formulario-agregar-juego-campos input:focus,
+.formulario-agregar-juego-campos textarea{
+    outline: none;
 }
 .formulario-agregar-juego-campos textarea{
     width: 100%;
     background-color: #121248;
     min-height: 10rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: none;
 }
 .text-area-agregar-juego{
     grid-column: 1/3;
+}
+.boton-formulario-agregar-juego{
+    background-color: #077e1d;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: 0.7s;
+    font-size: 1.5rem;
+}
+.boton-formulario-agregar-juego:hover{
+    background-color: #05b905;
+}
+.campo-completado{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.campo-completado label{
+   display: inline; 
+}
+.campo-completado input{
+    width:auto;
+}
+.p{
+    color: white;
+    text-align: start;
+}
+@media(width < 768px){
+    .formulario-agregar-juego{
+        grid-template-columns: 1fr;
+    }
 }
