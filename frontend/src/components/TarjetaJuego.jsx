@@ -14,6 +14,12 @@ function TarjetaJuego({ juego, onDelete }) {
     navigate(`/resena?juegoId=${juego._id}`);
   };
 
+  // Ir al formulario para editar el juego
+  const handleEditar = () => {
+    navigate(`/editar/${juego._id}`);
+  };
+
+
   return (
     <div className="juegosLibreria__card">
       <div className="juegosLibreria__card__img">
@@ -32,7 +38,10 @@ function TarjetaJuego({ juego, onDelete }) {
         </div>
 
         <div className="juegosLibreria__card__informacion__bottom">
-          <button className="boton-juego boton-editar">Editar</button>
+          
+          <button className="boton-juego boton-editar" onClick={handleEditar}>
+            Editar
+          </button>
 
           <button
             className="boton-juego boton-agregar-reseña"

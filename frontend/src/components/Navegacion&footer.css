@@ -127,3 +127,26 @@ footer{
         grid-template-columns: 1fr;
     }
 }
+
+/*-----------PÁGINA RESEÑAS (juego)------------*/
+/*-----------PÁGINA RESEÑAS (juego)------------*/
+/*-----------PÁGINA RESEÑAS (juego)------------*/
+
+.info-juego{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 2rem;
+    margin: 2rem;
+}
+.info-juego-juego{
+    display: flex;
+    justify-content: end;
+}
+
+.info-juego-informacion p{
+    text-align: start;
+}
+
+/*-----------PÁGINA RESEÑAS (formulario)------------*/
+/*-----------PÁGINA RESEÑAS (formulario)------------*/
+/*-----------PÁGINA RESEÑAS (formulario)------------*/

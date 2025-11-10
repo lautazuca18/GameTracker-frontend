@@ -87,65 +87,84 @@ function FormularioReseña() {
       {/* Mostrar datos del juego */}
       {juego && (
         <div className="info-juego">
-          <img
+          <div className="info-juego-juego">
+            <img
             src={juego.imagenPortada}
             alt={juego.titulo}
             style={{ width: "250px", borderRadius: "10px", marginBottom: "10px" }}
-          />
-          <h2>{juego.titulo}</h2>
+            />
+          </div>
+          <div className="info-juego-informacion">
+            <div className="info-juego-informacion-1">
+              <h2>{juego.titulo}</h2>
+              <p>{juego.descripcion}</p>
+            </div>            
+          </div>
+          
         </div>
       )}
 
       {/*Formulario de reseña */}
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Puntuación</label>
-          <input
-            placeholder="Puntuación del juego"
-            type="number"
-            min={0}
-            max={5}
-            value={puntuacion}
-            onChange={(e) => setPuntuacion(e.target.value)}
-            required
-          />
+        <div className="formulario-agregar-juego">
+          <div className="formulario-agregar-juego-campos">
+            <label>Puntuación</label>
+            <input
+              placeholder="Puntuación del juego"
+              type="number"
+              min={0}
+              max={5}
+              value={puntuacion}
+              onChange={(e) => setPuntuacion(e.target.value)}
+              required
+            />
+          </div>
 
-          <label>Reseña</label>
-          <textarea
+          <div className="formulario-agregar-juego-campos">
+            <label>Horas Jugadas</label>
+            <input
+              type="number"
+              min={0}
+              value={horasJugadas}
+              placeholder="Horas jugadas del juego"
+              onChange={(e) => setHorasJugadas(e.target.value)}
+            />
+          </div>
+
+          <div className="formulario-agregar-juego-campos">
+            <label>Reseña</label>
+            <textarea
             placeholder="Reseña sobre el juego"
             value={textoReseña}
             onChange={(e) => setTextoReseña(e.target.value)}
             required
-          ></textarea>
-
-          <label>Horas Jugadas</label>
-          <input
-            type="number"
-            min={0}
-            value={horasJugadas}
-            onChange={(e) => setHorasJugadas(e.target.value)}
-          />
-
-          <label>Dificultad</label>
-          <input
-            type="text"
-            value={dificultad}
-            onChange={(e) => setDificultad(e.target.value)}
-          />
-
-          <p>Recomendado</p>
-          <div>
-            <label>Recomiendo</label>
-            <input
-              type="radio"
-              name="recomendacion"
-              value="true"
-              checked={recomendaria === true}
-              onChange={() => setRecomendaria(true)}
-            />
+            ></textarea>
           </div>
 
+          <div className="formulario-agregar-juego-campos">
+            <label>Dificultad</label>
+            <input
+              type="text"
+              placeholder="Dificultad del juego"
+              value={dificultad}
+              onChange={(e) => setDificultad(e.target.value)}
+            />
+          </div>
+          
+
           <div>
+            <p>Recomendado</p>
+            <div>
+              <label>Recomiendo</label>
+              <input
+                type="radio"
+                name="recomendacion"
+                value="true"
+                checked={recomendaria === true}
+                onChange={() => setRecomendaria(true)}
+              />
+            </div>
+        
             <label>No Recomiendo</label>
             <input
               type="radio"
@@ -156,8 +175,8 @@ function FormularioReseña() {
             />
           </div>
 
-          <button type="submit">Guardar Reseña</button>
         </div>
+        <button type="submit">Guardar Reseña</button>
       </form>
 
       {/*Listado de reseñas */}

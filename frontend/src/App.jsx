@@ -7,6 +7,7 @@ import Biblioteca from './pages/biblioteca.jsx';
 import Estadisticas from './pages/estadisticas.jsx';
 import AgregarJuego from './pages/agregarJuego.jsx';
 import AgregarResena from './pages/agregarReseña.jsx';
+import EditarJuego from './pages/editarJuego.jsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/estadisticas" element={<Estadisticas />} />
         <Route path="/agregar-juego" element={<AgregarJuego />} />
         <Route path="/resena" element={<AgregarResena />} />
+        <Route path="/editar/:id" element={<EditarJuego />} />
       </Routes>
 
       <Footer />
