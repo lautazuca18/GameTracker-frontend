@@ -144,7 +144,7 @@ function FormularioJuego() {
           <div className="formulario-agregar-juego-campos">
             <p className="p">Completado</p>
             <div className="campo-completado">
-              <div>
+              <div className="campo-completado-completado">
                 <label htmlFor="true">Terminado</label>
                 <input
                   type="radio"
@@ -156,7 +156,7 @@ function FormularioJuego() {
                   required
                 />
                 </div>
-                <div>
+                <div className="campo-completado-curso">
                   <label htmlFor="false">En curso</label>
                 <input
                   type="radio"

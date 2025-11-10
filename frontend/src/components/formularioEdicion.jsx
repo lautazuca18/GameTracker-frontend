@@ -154,8 +154,7 @@ function FormularioEdicion() {
           <div className="formulario-agregar-juego-campos">
             <p className="p">Completado</p>
             <div className="campo-completado">
-              <div>
-                <label htmlFor="true">Terminado</label>
+              <div className="campo-completado-completado">
                 <input
                   type="radio"
                   id="true"
@@ -165,9 +164,9 @@ function FormularioEdicion() {
                   onChange={handleChange}
                   required
                 />
+                <label htmlFor="true">Terminado</label>
               </div>
-              <div>
-                <label htmlFor="false">En curso</label>
+              <div className="campo-completado-curso">
                 <input
                   type="radio"
                   id="false"
@@ -177,6 +176,7 @@ function FormularioEdicion() {
                   onChange={handleChange}
                   required
                 />
+                <label htmlFor="false">En curso</label>
               </div>
             </div>
           </div>

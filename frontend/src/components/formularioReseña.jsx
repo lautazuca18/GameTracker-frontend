@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import './Navegacion&footer.css';
+import "./Navegacion&footer.css";
 
 function FormularioReseña() {
   const [params] = useSearchParams();
@@ -89,23 +89,26 @@ function FormularioReseña() {
         <div className="info-juego">
           <div className="info-juego-juego">
             <img
-            src={juego.imagenPortada}
-            alt={juego.titulo}
-            style={{ width: "250px", borderRadius: "10px", marginBottom: "10px" }}
+              src={juego.imagenPortada}
+              alt={juego.titulo}
+              style={{
+                width: "250px",
+                borderRadius: "10px",
+                marginBottom: "10px",
+              }}
             />
           </div>
           <div className="info-juego-informacion">
             <div className="info-juego-informacion-1">
               <h2>{juego.titulo}</h2>
               <p>{juego.descripcion}</p>
-            </div>            
+            </div>
           </div>
-          
         </div>
       )}
 
       {/*Formulario de reseña */}
-      <form onSubmit={handleSubmit}>
+      <form className="formulario-agregar-reseñas" onSubmit={handleSubmit}>
         <div className="formulario-agregar-juego">
           <div className="formulario-agregar-juego-campos">
             <label>Puntuación</label>
@@ -134,10 +137,10 @@ function FormularioReseña() {
           <div className="formulario-agregar-juego-campos">
             <label>Reseña</label>
             <textarea
-            placeholder="Reseña sobre el juego"
-            value={textoReseña}
-            onChange={(e) => setTextoReseña(e.target.value)}
-            required
+              placeholder="Reseña sobre el juego"
+              value={textoReseña}
+              onChange={(e) => setTextoReseña(e.target.value)}
+              required
             ></textarea>
           </div>
 
@@ -150,33 +153,39 @@ function FormularioReseña() {
               onChange={(e) => setDificultad(e.target.value)}
             />
           </div>
-          
 
-          <div>
-            <p>Recomendado</p>
-            <div>
-              <label>Recomiendo</label>
-              <input
-                type="radio"
-                name="recomendacion"
-                value="true"
-                checked={recomendaria === true}
-                onChange={() => setRecomendaria(true)}
-              />
+          <div className="formulario-agregar-juego-campos">
+            <p className="p-recomendado">Recomendado</p>
+            <div className="campo-recomendado">
+              <div className="campo-recomendado-si">
+                <input
+                  type="radio"
+                  id="recomiendo"
+                  name="recomendacion"
+                  value="true"
+                  checked={recomendaria === true}
+                  onChange={() => setRecomendaria(true)}
+                />
+                <label htmlFor="recomiendo">Recomiendo</label>
+              </div>
+
+              <div className="campo-recomendado-no">
+                <input
+                  type="radio"
+                  id="no-recomiendo"
+                  name="recomendacion"
+                  value="false"
+                  checked={recomendaria === false}
+                  onChange={() => setRecomendaria(false)}
+                />
+                <label htmlFor="no-recomiendo">No Recomiendo</label>
+              </div>
             </div>
-        
-            <label>No Recomiendo</label>
-            <input
-              type="radio"
-              name="recomendacion"
-              value="false"
-              checked={recomendaria === false}
-              onChange={() => setRecomendaria(false)}
-            />
           </div>
-
         </div>
-        <button type="submit">Guardar Reseña</button>
+        <button className="boton-formulario-agregar-juego" type="submit">
+          Guardar Reseña
+        </button>
       </form>
 
       {/*Listado de reseñas */}
@@ -187,12 +196,25 @@ function FormularioReseña() {
           <p>No hay reseñas todavía.</p>
         ) : (
           resenas.map((r) => (
-            <div key={r._id} className="card-reseña" style={{ border: "1px solid #ccc", borderRadius: "8px", padding: "10px", marginTop: "10px" }}>
-              <p><strong>Puntuación:</strong> {r.puntuacion}/5</p>
-              <p><strong>Horas jugadas:</strong> {r.horasJugadas}</p>
-              <p><strong>Dificultad:</strong> {r.dificultad}</p>
-              <p><strong>Recomienda:</strong> {r.recomendaria ? "Sí" : "No"}</p>
-              <p><strong>Reseña:</strong> {r.textoReseña}</p>
+            <div key={r._id} className="card-reseña" style={{}}>
+              <p>
+                <strong>Puntuación:</strong> {r.puntuacion}/5
+              </p>
+              <p>
+                <strong>Horas jugadas:</strong> {r.horasJugadas}
+              </p>
+              <p>
+                <strong>Dificultad:</strong> {r.dificultad}
+              </p>
+              <p>
+                <strong>Recomienda:</strong> {r.recomendaria ? "Sí" : "No"}
+              </p>
+              <p>
+                <strong>Reseña:</strong> {r.textoReseña}
+              </p>
+              <div className="btn-eliminar-reseña">
+                <button>Eliminar Reseña</button>
+              </div>
             </div>
           ))
         )}
