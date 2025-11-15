@@ -82,6 +82,29 @@ function FormularioReseña() {
     }
   };
 
+  const eliminarResena = async (idResena) => {
+    if (!confirm("¿Seguro que quieres eliminar esta reseña?")) return;
+
+    try {
+      const response = await fetch(
+        `http://localhost:3000/resenas/${idResena}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (response.ok) {
+        alert("🗑️ Reseña eliminada");
+        cargarResenas(); // Recargar lista
+      } else {
+        alert("❌ Error eliminando reseña");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("⚠️ No se pudo conectar con el servidor");
+    }
+  };
+
   return (
     <div>
       {/* Mostrar datos del juego */}
@@ -213,7 +236,9 @@ function FormularioReseña() {
                 <strong>Reseña:</strong> {r.textoReseña}
               </p>
               <div className="btn-eliminar-reseña">
-                <button>Eliminar Reseña</button>
+                <button onClick={() => eliminarResena(r._id)}>
+                  Eliminar Reseña
+                </button>
               </div>
             </div>
           ))
